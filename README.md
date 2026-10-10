@@ -57,16 +57,6 @@ git push -u origin main
 ```
 Create an empty GitHub repository first, then replace the example remote URL. `.gitignore` excludes `.env`, dependencies, and virtual environments.
 
-## Deploy like CV Pilot
-
-### Backend — Render
-- Create a **Web Service** connected to the GitHub repository.
-- Root Directory: `backend`
-- Build Command: `pip install -r requirements.txt`
-- Start Command: `gunicorn app:app`
-- Add environment variable `OPENAI_API_KEY` (optional) and `OPENAI_MODEL` (`gpt-4o-mini`).
-- Set `FRONTEND_ORIGIN` to the deployed Vercel URL after creating the frontend. For local use, its default is `http://localhost:5173`.
-
 ### Frontend — Vercel
 - Import the same GitHub repository as a separate Vercel project.
 - Root Directory: `frontend`
